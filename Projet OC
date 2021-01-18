@@ -1,0 +1,30 @@
+export class Book {
+   constructor(title, author, description, pages, currentPage, read) {
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.pages = pages;
+        this.currentPage = currentPage;
+        this.read = read;
+   }
+   readBook(page){
+     if(page < 1 || page > pages){
+       return 0;
+     }
+     else if (page >= 1 && page < pages){
+       this.currentPage == page;
+       return 1;
+     }
+     else (page == pages){
+       this.currentPage == page;
+       this.read == true;
+       return 1;
+     }
+   } 
+}
+
+let a = new Book ('a','aa','aaa',10,0,false);
+let b = new Book ('b','bb','bbb',10,10,true);
+let c = new Book ('c','cc','ccc',2,0,false);
+
+export const books = [a, b, c];
