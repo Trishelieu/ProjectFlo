@@ -8,23 +8,23 @@ export class Book {
         this.read = read;
    }
    readBook(page){
-     if(page < 1 || page > pages){
+     if(page < 1 || page > this.pages){
        return 0;
      }
-     else if (page >= 1 && page < pages){
-       this.currentPage == page;
+     else if (page >= 1 && page < this.pages){
+       this.currentPage = page;
        return 1;
      }
-     else (page == pages){
-       this.currentPage == page;
-       this.read == true;
+     else {
+       this.currentPage = page;
+       this.read = true;
        return 1;
      }
    } 
 }
 
-let a = new Book ('a','aa','aaa',10,0,false);
-let b = new Book ('b','bb','bbb',10,10,true);
-let c = new Book ('c','cc','ccc',2,0,false);
+let a = new Book ('le Taekwondo 1','guigui san','le pied',10,0,false);
+let b = new Book ('le Taekwondo 2','franfran san','le poing',50,0,false);
+let c = new Book ('le Taekwondo 3','floflo san','le kiap',100,0,false);
 
 export const books = [a, b, c];
